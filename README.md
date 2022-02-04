@@ -51,3 +51,34 @@ For Developers
 ============
 You can also see either [Python](https://github.com/starlangsoftware/NER-Py), [Cython](https://github.com/starlangsoftware/NER-Cy), [Java](https://github.com/starlangsoftware/NER),
 [C++](https://github.com/starlangsoftware/NER-CPP), [C#](https://github.com/starlangsoftware/NER-CS), or [C#](https://github.com/starlangsoftware/NER-CS) repository.
+
+Detailed Description
+============
+
+## ParseTree
+
+In order to find the named entities in a parse tree, one uses autoNER method of the TreeAutoNER class.
+
+	parseTree = ...
+	turkishNer = TurkishTreeAutoNER(ViewLayerType.Turkish)
+	turkishNer.autoNER(parseTree)
+
+## Sentence
+
+In order to find the named entities in a simple sentence, one uses autoNER method of the SentenceAutoNER class.
+
+	sentence = ...
+	turkishNer = TurkishSentenceAutoNER()
+	turkishNer.autoNER(sentence)
+
+# Cite
+
+	@INPROCEEDINGS{8093439,
+  	author={B. {Ertopçu} and A. B. {Kanburoğlu} and O. {Topsakal} and O. {Açıkgöz} and A. T. {Gürkan} and B. {Özenç} and İ. {Çam} and B. {Avar} and G. {Ercan} 	and O. T. {Yıldız}},
+  	booktitle={2017 International Conference on Computer Science and Engineering (UBMK)}, 
+  	title={A new approach for named entity recognition}, 
+  	year={2017},
+  	volume={},
+  	number={},
+  	pages={474-479},
+  	doi={10.1109/UBMK.2017.8093439}}
