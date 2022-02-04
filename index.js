@@ -1,0 +1,5 @@
+export * from "./dist/ParseTree/PersianAutoNER"
+export * from "./dist/ParseTree/TreeAutoNER"
+export * from "./dist/ParseTree/TurkishTreeAutoNER"
+export * from "./dist/Sentence/SentenceAutoNER"
+export * from "./dist/Sentence/TurkishSentenceAutoNER"
