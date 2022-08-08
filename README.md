@@ -47,6 +47,11 @@ After annotating sentences, you can use [DataGenerator](https://github.com/starl
 
 After generating the classification dataset as above, one can use the [Classification](https://github.com/starlangsoftware/Classification-Cy) package to generate machine learning models for the Named Entity Recognition task.
 
+Video Lectures
+============
+
+[<img src=https://github.com/StarlangSoftware/NER/blob/master/video.jpg width="50%">](https://youtu.be/4pxdvP_Rfd8)
+
 For Developers
 ============
 You can also see either [Python](https://github.com/starlangsoftware/NER-Py), [Cython](https://github.com/starlangsoftware/NER-Cy), [Java](https://github.com/starlangsoftware/NER),
