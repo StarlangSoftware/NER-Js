@@ -19,6 +19,10 @@
         constructor() {
             super(ViewLayerType_1.ViewLayerType.TURKISH_WORD);
         }
+        /**
+         * The method checks the LOCATION gazetteer, and if the word exists in the gazetteer, it assigns the LOCATION tag.
+         * @param parseTree The tree for which LOCATION named entities checked.
+         */
         autoDetectLocation(parseTree) {
             let nodeDrawableCollector = new NodeDrawableCollector_1.NodeDrawableCollector(parseTree.getRoot(), new IsTurkishLeafNode_1.IsTurkishLeafNode());
             let leafList = nodeDrawableCollector.collect();
@@ -29,6 +33,11 @@
                 }
             }
         }
+        /**
+         * The method checks for the MONEY entities using regular expressions. After that, if the expression is a MONEY
+         * expression, it also assigns the previous nodes, which may included numbers or some monetarial texts, MONEY tag.
+         * @param parseTree The tree for which MONEY named entities checked.
+         */
         autoDetectMoney(parseTree) {
             let nodeDrawableCollector = new NodeDrawableCollector_1.NodeDrawableCollector(parseTree.getRoot(), new IsTurkishLeafNode_1.IsTurkishLeafNode());
             let leafList = nodeDrawableCollector.collect();
@@ -53,6 +62,11 @@
                 }
             }
         }
+        /**
+         * The method assigns the words "corp.", "inc.", and "co" ORGANIZATION tag. The method also checks the
+         * ORGANIZATION gazetteer, and if the word exists in the gazetteer, it assigns ORGANIZATION tag.
+         * @param parseTree The tree for which ORGANIZATION named entities checked.
+         */
         autoDetectOrganization(parseTree) {
             let nodeDrawableCollector = new NodeDrawableCollector_1.NodeDrawableCollector(parseTree.getRoot(), new IsTurkishLeafNode_1.IsTurkishLeafNode());
             let leafList = nodeDrawableCollector.collect();
@@ -66,6 +80,11 @@
                 }
             }
         }
+        /**
+         * The method assigns the words "bay" and "bayan" PERSON tag. The method also checks the PERSON gazetteer, and if
+         * the word exists in the gazetteer, it assigns PERSON tag. The parent node should have the proper noun tag NNP.
+         * @param parseTree The tree for which PERSON named entities checked.
+         */
         autoDetectPerson(parseTree) {
             let nodeDrawableCollector = new NodeDrawableCollector_1.NodeDrawableCollector(parseTree.getRoot(), new IsTurkishLeafNode_1.IsTurkishLeafNode());
             let leafList = nodeDrawableCollector.collect();
@@ -79,6 +98,11 @@
                 }
             }
         }
+        /**
+         * The method checks for the TIME entities using regular expressions. After that, if the expression is a TIME
+         * expression, it also assigns the previous texts, which are numbers, TIME tag.
+         * @param parseTree The tree for which TIME named entities checked.
+         */
         autoDetectTime(parseTree) {
             let nodeDrawableCollector = new NodeDrawableCollector_1.NodeDrawableCollector(parseTree.getRoot(), new IsTurkishLeafNode_1.IsTurkishLeafNode());
             let leafList = nodeDrawableCollector.collect();
